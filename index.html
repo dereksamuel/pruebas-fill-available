@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    main {
+      height: 100vh;
+      height: -moz-available;
+      /* WebKit-based browsers will ignore this. */
+      height: -webkit-fill-available;
+      /* Mozilla-based browsers will ignore this. */
+      height: fill-available;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main div {
+      padding: 1rem;
+      flex: 1;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main div:nth-child(1) {
+      background-color: red;
+    }
+
+    main div:nth-child(2) {
+      background-color: blue;
+    }
+
+    main div:nth-child(3) {
+      background-color: violet;
+    }
+
+    main div:nth-child(4) {
+      background-color: green;
+    }
+
+    main div:nth-child(5) {
+      background-color: black;
+    }
+
+    main button {
+      position: fixed;
+      bottom: 15px;
+      left: 15px;
+      padding: 1rem;
+      color: white;
+      background-color: rgb(46, 46, 46);
+      border-radius: 5px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div>Hi title</div>
+    <div>Hello subtitle</div>
+    <div>
+      <iframe src="https://www.youtube.com/embed/yOx2Ct4oWKE?list=PLwNSf6_g9NeAiP-vBMrV5NS1zOHBm6N_b" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div>
+      <input type="text" name="info" id="info" />
+    </div>
+    <div>Hi</div>
+    <button>Click me</button>
+  </main>
+</body>
+
+</html>
