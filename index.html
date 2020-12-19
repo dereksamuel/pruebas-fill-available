@@ -12,47 +12,65 @@
       box-sizing: border-box;
     }
 
-    main {
-      height: 100vh;
+    html {
       height: -moz-available;
       /* WebKit-based browsers will ignore this. */
       height: -webkit-fill-available;
       /* Mozilla-based browsers will ignore this. */
       height: fill-available;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: -moz-available;
+      /* WebKit-based browsers will ignore this. */
+      min-height: -webkit-fill-available;
+      /* Mozilla-based browsers will ignore this. */
+      min-height: fill-available;
       display: flex;
       flex-direction: column;
     }
 
-    main div {
+    /* main {
+      height: 100%;
+    }
+
+    .content-flex {
+      display: flex;
+      flex-direction: column;
+      height: inherit;
+    } */
+
+    .flexElm {
       padding: 1rem;
       flex: 1;
       border-radius: 5px;
       display: flex;
-      justify-content: center;
+      /* justify-content: center; */
       align-items: center;
     }
 
-    main div:nth-child(1) {
+    body div:nth-child(1) {
       background-color: red;
     }
 
-    main div:nth-child(2) {
+    body div:nth-child(2) {
       background-color: blue;
     }
 
-    main div:nth-child(3) {
+    body div:nth-child(3) {
       background-color: violet;
     }
 
-    main div:nth-child(4) {
+    body div:nth-child(4) {
       background-color: green;
     }
 
-    main div:nth-child(5) {
+    body div:nth-child(5) {
       background-color: black;
     }
 
-    main button {
+    body button {
       position: fixed;
       bottom: 15px;
       left: 15px;
@@ -66,20 +84,22 @@
 </head>
 
 <body>
-  <main>
-    <div>Hi title</div>
-    <div>Hello subtitle</div>
-    <div>
-      <iframe src="https://www.youtube.com/embed/yOx2Ct4oWKE?list=PLwNSf6_g9NeAiP-vBMrV5NS1zOHBm6N_b" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+  <div style="height: 50px;">Hi title</div>
+  <div class="flexElm">Hello subtitle</div>
+  <div style="height: 100px;">
+    <iframe src="https://www.youtube.com/embed/yOx2Ct4oWKE?list=PLwNSf6_g9NeAiP-vBMrV5NS1zOHBm6N_b" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div class="flexElm">
+  <div class="flexElm">
+    <input type="text" name="info" id="info" />
+  </div class="flexElm">
+  <div class="flexElm">Hi</div>
+  <button>Click me</button>
+  <!-- <main>
+    <div class="content-flex">
     </div>
-    <div>
-      <input type="text" name="info" id="info" />
-    </div>
-    <div>Hi</div>
-    <button>Click me</button>
-  </main>
+  </main> -->
 </body>
 
 </html>
